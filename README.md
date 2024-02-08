@@ -14,7 +14,7 @@ Allow users to add products to a shopping cart
 Allow update or remove items from the shopping cart
 Add quantity of the products
 
-Feature 3(Auguestine)
+Feature 3(Augustine Nguyen Le Khang)
 Order summery and confirmation page
 Address and payment details input
 
