@@ -12,9 +12,10 @@ A brief description of your web development project.
 
 ## Features
 
-- [ ] Feature 1 (Ilyas): Title of the feature. 
-- [ ] Feature 2 (Full Name): Title of the feature.
-- [ ] Feature 3 (Full Name): Title of the feature.
+- [ ] Feature 1 (Ilyas): Add filter. 
+- [ ] Feature 2 (Zwe Lwin): Shopping Cart.
+- [ ] Feature 3 (Augustine Nguyen Le Khang): Checkout Process.
+- [ ] Feature 4 (Nerov): Contact form. 
 
 > Add features as required. 
 
@@ -36,9 +37,10 @@ Include more detailed information about Feature 3 here. Provide links to related
 
 List the database tables that are part of your project. 
 
-- Table 1 (Created By): Table Name 
-- Table 2 (Created By): Table Name 
-- Table 3 (Created By): Table Name 
+- Table 1 (Created By Ilyas): Product 
+- Table 2 (Created By Zwe Lwin): Customer 
+- Table 3 (Created By Augustine Nguyen Le Khang): Payments 
+- Table 4 (Created By Nerov): Promotions 
 
 > Include the ER Diagram of the database. 
 
