@@ -1,4 +1,4 @@
-# JooMarketti website - Team (2)
+# JooMarketti online store - Team (2)
 
 A brief description of your web development project.
 
@@ -12,9 +12,7 @@ A brief description of your web development project.
 
 ## Features
 
-In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
-
-- [ ] Feature 1 (Full Name): Title of the feature. 
+- [ ] Feature 1 (Ilyas): Title of the feature. 
 - [ ] Feature 2 (Full Name): Title of the feature.
 - [ ] Feature 3 (Full Name): Title of the feature.
 
