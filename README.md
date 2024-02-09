@@ -25,7 +25,9 @@ Allows user to chose products based on prices, brands , categories.. Provide lin
 
 ### Feature 2
 
-Include more detailed information about Feature 2 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+Allow users to add products to a shopping cart
+Allow update or remove items from the shopping cart
+Add/Remove quantity of the products. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
 ### Feature 3
 
