@@ -1,4 +1,4 @@
-# Project Name - Team Number
+# JooMarketti website - Team (2)
 
 A brief description of your web development project.
 
