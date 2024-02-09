@@ -62,7 +62,7 @@ List and describe any forms that have been created as part of your project. Incl
 List any tables that you have created in the project work
 
 - Table 1 (Created By ILYAS): ilyas_Product | https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas_Product.sql | Link to the table (shell.hamk.fi).
-- Table 2 (Created By Liam): customer | Link to the related code file (github) | Link to the table (shell.hamk.fi).
+- Table 2 (Created By Liam): customer | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_Customer.sql | Link to the table (shell.hamk.fi).
 - Table 3 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 
 ---
