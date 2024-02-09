@@ -1,4 +1,7 @@
 # github.io-webpro-team2
+
+Joo_Marketti is a grocery website withe fresh and new items every day.
+
 Upgrading the pages, getting the data of the customers,products, orders and feedbacks.
 
 Feature 1: Add filter.
@@ -23,8 +26,8 @@ Get details about user information and feedback
 
 #Database Tables
 
-Table 1 :Product
-Table 2: Customer
-Table 3:Payments
-TAble 4: Promotions
+Table 1 :Product Ilyas
+Table 2: Customer Liam
+Table 3:Payments  Augustine Nguyen Le Khang
+TAble 4: Promotions Nerov
  
