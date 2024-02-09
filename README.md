@@ -21,7 +21,7 @@ A brief description of your web development project.
 
 ### Feature 1
 
-Include more detailed information about Feature 1 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+Allows user to chose products based on prices, brands , categories.. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
 ### Feature 2
 
@@ -61,7 +61,7 @@ List and describe any forms that have been created as part of your project. Incl
 
 List any tables that you have created in the project work
 
-- Table 1 (Created By ILYAS): ilyas_Product | Link to the related code file (github) | Link to the table (shell.hamk.fi).
+- Table 1 (Created By ILYAS): ilyas_Product | https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas_Product.sql | Link to the table (shell.hamk.fi).
 - Table 2 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 - Table 3 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 
