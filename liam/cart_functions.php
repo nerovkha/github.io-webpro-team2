@@ -25,7 +25,7 @@ function addToCart($productId) {
 }
 
 // Function to update or remove items from the cart
-function updateQuantity($productId, $operation) {
+function updateQuantity($productId, $quantity) {
     $cart = $_SESSION['cart'];
 
     // Find the product in the cart
@@ -33,11 +33,7 @@ function updateQuantity($productId, $operation) {
 
     if ($key !== false) {
         // Update the quantity based on the operation
-        if ($operation === 'increment') {
-            $cart[$key]['quantity']++;
-        } elseif ($operation === 'decrement' && $cart[$key]['quantity'] > 1) {
-            $cart[$key]['quantity']--;
-        }
+        $cart[$key]['quantity'] = $quantity;
 
         $_SESSION['cart'] = $cart;
     }
@@ -53,5 +49,10 @@ function removeFromCart($productId) {
     });
 
     $_SESSION['cart'] = $cart;
+}
+
+// Function to calculate the total price for a product based on its quantity
+function calculateProductTotal($quantity, $price) {
+    return $quantity * $price;
 }
 ?>
