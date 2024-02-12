@@ -71,4 +71,4 @@ List any tables that you have created in the project work
 
 
 
-> Feel free to customize this README template to suit your project's specific needs. Providing clear and organized documentation will help your team members understand the project's progress and tasks effectively. This document will have a significant impact on the grading. 
+We will be impletmenting features and database tabe and ER diagram.
