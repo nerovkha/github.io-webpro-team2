@@ -12,8 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 addToCart($productId);
                 break;
             case 'update':
-                $operation = $_POST['operation'];
-                updateQuantity($productId, $operation);
+                if (isset($_POST['quantity'])) {
+                    $quantity = (int)$_POST['quantity'];
+                    updateQuantity($productId, $quantity);
+                }
                 break;
             case 'remove':
                 removeFromCart($productId);
@@ -40,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="row nav-container">
         <div class="col-12 col-md-6">
             <header class="h1 text-white"><a class="Home-page text-white" href="index.html">Joo-marketti</a></header>
-            
         </div>
         <div class="col-6">
             <nav class="navbar navbar-expand-md bg-body-tertiary">
@@ -66,11 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <!-- Drop down bar for latter -->
                         <li class="nav-item">
                             <a class="nav-link text-white" href="liam.html">Shopping Cart</a>
-                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="contact.html">Contact Us</a>
-                            
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -80,6 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </nav>
         </div>
     </div>
+  </div>
 
   <!-- Shopping Cart -->
   <div class="card mt-4">
@@ -95,34 +95,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <!-- Product 1 -->
-        <div class="row border-top border-bottom main align-items-center product-item">
-          <div class="col-2">
-            <img class="img-fluid" src="images/lars-blankers-6Z7Ss9jlEL0-unsplash.jpg" alt="Product Image">
-          </div>
-          <div class="col">
-            <div class="row text-muted">Vegetables</div>
-            <div class="row">Heirloom tomato</div>
-          </div>
-          <div class="col">
-            <a href="#">-</a><a href="#" class="border">1 kg</a><a href="#">+</a>
-          </div>
-          <div class="col">&euro; 4.00 <span class="close">&#10005;</span></div>
-        </div>
+        <form method="post" action="">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="product_id" value="1">
+            <div class="row border-top border-bottom main align-items-center product-item">
+                <div class="col-2">
+                    <img class="img-fluid" src="images/lars-blankers-6Z7Ss9jlEL0-unsplash.jpg" alt="Product Image">
+            </div>
+            <div class="col">
+                <div class="row text-muted">Vegetables</div>
+                <div class="row">Heirloom tomato</div>
+            </div>
+            <div class="col">
+                <input type="number" name="quantity" value="1" min="1">
+            </div>
+            <div class="col">&euro; 4.00 <button type="submit" class="close">&#10005;</button></div>
+            </div>
+        </form>
 
         <!-- Product 2 -->
+        <form method="post" action="">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="product_id" value="2">
         <div class="row border-top border-bottom main align-items-center product-item">
-          <div class="col-2">
+            <div class="col-2">
             <img class="img-fluid" src="images/mockup-graphics-vVjA1KeKg-w-unsplash.jpg" alt="Product Image">
-          </div>
-          <div class="col">
+        </div>
+        <div class="col">
             <div class="row text-muted">Vegetables</div>
             <div class="row">Banana</div>
-          </div>
-          <div class="col">
-            <a href="#">-</a><a href="#" class="border">1 kg</a><a href="#">+</a>
-          </div>
-          <div class="col">&euro; 5.00 <span class="close">&#10005;</span></div>
         </div>
+        <div class="col">
+            <input type="number" name="quantity" value="1" min="1">
+        </div>
+        <div class="col">&euro; 5.00 <button type="submit" class="close">&#10005;</button></div>
+    </div>
+        </form>
 
         <div class="back-to-shop">
           <a href="index.html">&leftarrow;</a><span class="text-muted">Back to shop</span>
