@@ -65,10 +65,11 @@ List any tables that you have created in the project work
 
 - Table 1 (Created By ILYAS): ilyas_Product | https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas_Product.sql | Link to the table (shell.hamk.fi).
 - Table 2 (Created By Liam): customer | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_Customer.sql | Link to the table (shell.hamk.fi).
-- Table 3 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | Link to the table (shell.hamk.fi).
-
+- Table 3 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | Link to the table (shell.hamk.fi). 
+ER Diagram of our database :  https://drive.google.com/file/d/1tA-idQyZ0-tMLxott2VKpGwWddtvUKoz/view
 ---
 
 
 
 We will be impletmenting features and database tabe and ER diagram.
+
