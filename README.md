@@ -26,7 +26,6 @@ Allows user to chose products based on prices, brands , categories.. Provide lin
 
 ### Feature 2
 
-Allow update or remove items from the shopping cart.
 Add/Remove quantity of the products.
 The prices of the products changes automatically based on the quantity of the products.
 Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
