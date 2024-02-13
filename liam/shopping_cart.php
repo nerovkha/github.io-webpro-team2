@@ -7,7 +7,6 @@ include("../header.php");
 // Sample product data
 $products = [
     ['name' => 'Heirloom Tomato', 'price' => 4.00, 'image' => 'images/a.jpg'],
-    ['name' => 'Banana', 'price' => 5.00, 'image' => 'images/b.jpg'],
 ];
 
 // Function to calculate total price based on quantity
@@ -40,11 +39,9 @@ function displayProduct($index, $product)
     </div>';
 }
 
-// Add products to the cart for testing purposes
+// Add a product to the cart
 if (empty($_SESSION['cart'])) {
-    // Add multiple products to the cart
-    $_SESSION['cart'][] = ['product' => 0, 'quantity' => 1]; // Heirloom Tomato
-    $_SESSION['cart'][] = ['product' => 1, 'quantity' => 1]; // Banana
+    $_SESSION['cart'][] = ['product' => 0, 'quantity' => 1];
 }
 
 // Handle quantity changes
@@ -62,66 +59,66 @@ if (isset($_POST['index'])) {
 }
 ?>
 
-<!-- Shopping Cart -->
-<div class="card mt-4">
-    <div class="row">
-        <div class="col-md-8 cart">
-            <div class="title">
-                <div class="row">
-                    <div class="col">
-                        <h4><b>Shopping Cart</b></h4>
+    <!-- Shopping Cart -->
+    <div class="card mt-4">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h4><b>Shopping Cart</b></h4>
+                        </div>
+                        <div class="col align-self-center text-right text-muted"><?php echo count($_SESSION['cart']); ?> items</div>
                     </div>
-                    <div class="col align-self-center text-right text-muted"><?php echo count($_SESSION['cart']); ?> items</div>
+                </div>
+
+                <?php
+                // Display each product in the cart
+                foreach ($_SESSION['cart'] as $index => $cartItem) {
+                    displayProduct($index, $products[$cartItem['product']]);
+                }
+                ?>
+
+                <div class="back-to-shop">
+                    <a href="index.html">&leftarrow;</a><span class="text-muted">Back to shop</span>
                 </div>
             </div>
 
-            <?php
-            // Display each product in the cart
-            foreach ($_SESSION['cart'] as $index => $cartItem) {
-                displayProduct($index, $products[$cartItem['product']]);
-            }
-            ?>
+            <div class="col-md-4 summary">
+                <!-- Summary Section -->
+                <div>
+                    <h5><b>Summary</b></h5>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">ITEMS <?php echo count($_SESSION['cart']); ?></div>
+                    <div class="col text-right">&euro; <?php
+                        $totalPrice = 0;
+                        foreach ($_SESSION['cart'] as $index => $cartItem) {
+                            $totalPrice += calculateTotal($cartItem['quantity'], $products[$cartItem['product']]['price']);
+                        }
+                        echo number_format($totalPrice, 2);
+                    ?></div>
+                </div>
 
-            <div class="back-to-shop">
-                <a href="index.html">&leftarrow;</a><span class="text-muted">Back to shop</span>
+                <form>
+                    <p>SHIPPING</p>
+                    <select>
+                        <option class="text-muted">Standard-Delivery- &euro;5.00</option>
+                    </select>
+
+                    <p>PROMO CODE</p>
+                    <input id="code" placeholder="Enter your code">
+                </form>
+
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">TOTAL PRICE</div>
+                    <div class="col text-right">&euro; <?php echo number_format($totalPrice + 5.00, 2); ?></div>
+                </div>
+
+                <button class="btn">CHECKOUT</button>
             </div>
-        </div>
-
-        <div class="col-md-4 summary">
-            <!-- Summary Section -->
-            <div>
-                <h5><b>Summary</b></h5>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col" style="padding-left:0;">ITEMS <?php echo count($_SESSION['cart']); ?></div>
-                <div class="col text-right">&euro; <?php
-                    $totalPrice = 0;
-                    foreach ($_SESSION['cart'] as $index => $cartItem) {
-                        $totalPrice += calculateTotal($cartItem['quantity'], $products[$cartItem['product']]['price']);
-                    }
-                    echo number_format($totalPrice, 2);
-                ?></div>
-            </div>
-
-            <form>
-                <p>SHIPPING</p>
-                <select>
-                    <option class="text-muted">Standard-Delivery- &euro;5.00</option>
-                </select>
-
-                <p>PROMO CODE</p>
-                <input id="code" placeholder="Enter your code">
-            </form>
-
-            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                <div class="col">TOTAL PRICE</div>
-                <div class="col text-right">&euro; <?php echo number_format($totalPrice + 5.00, 2); ?></div>
-            </div>
-
-            <button class="btn">CHECKOUT</button>
         </div>
     </div>
-</div>
 
 <?php include('../footer.php'); ?>
