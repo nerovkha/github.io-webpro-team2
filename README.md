@@ -26,10 +26,9 @@ Allows user to chose products based on prices, brands , categories.. Provide lin
 
 ### Feature 2
 
-Allow update or remove items from the shopping cart.
 Add/Remove quantity of the products.
 The prices of the products changes automatically based on the quantity of the products.
-Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/shopping_cart.php(github) & link to the feature (shell.hamk.fi) .
 
 ### Feature 3
 
@@ -55,7 +54,7 @@ List the database tables that are part of your project.
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
 - Form 1 (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
-- Form 2: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 2: (Created By Liam): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 - Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 
 ---
