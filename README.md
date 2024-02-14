@@ -22,7 +22,7 @@ A brief description of your web development project.
 
 ### Feature 1
 
-Allows user to chose products based on prices, brands , categories.. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+Allows user to chose products based on prices, brands , categories..https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas/ilyas_filter.php & link to the feature (shell.hamk.fi) .
 
 ### Feature 2
 
@@ -54,9 +54,14 @@ List the database tables that are part of your project.
 
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
-- Form 1 (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
-- Form 2: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | Link to the form (shell.hamk.fi). | Validations Applied
-- Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 1 (Created By Ilyas): Form Name: filter_form https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas/ilyas_filter.php| Link to the form (shell.hamk.fi). | Validations Applied
+
+- Form 2 (Created By Ilyas): Form Name: Add_form https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas/create.php| Link to the form (shell.hamk.fi). | Validations Applied
+
+- Form 3 (Created By Ilyas): Form Name: delete_form https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas/create.php| Link to the form (shell.hamk.fi). | Validations Applied
+
+- Form 4: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 5: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 
 ---
 

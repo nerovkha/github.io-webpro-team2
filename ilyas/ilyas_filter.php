@@ -102,6 +102,40 @@ if(isset($_POST['submit'])) {
     <br>
     <input type="submit" name="submit" value="Filter">
 </form>
+
+<script>
+        function validateForm() {
+            var category = document.forms["filter_form"]["category"].value;
+            var minPrice = document.forms["filter_form"]["min_price"].value;
+            var maxPrice = document.forms["filter_form"]["max_price"].value;
+
+            // Validate category
+            if (category === "") {
+                alert("Please select a category.");
+                return false;
+            }
+
+            // Validate minPrice
+            if (minPrice !== "" && isNaN(minPrice)) {
+                alert("Min Price must be a number.");
+                return false;
+            }
+
+            // Validate maxPrice
+            if (maxPrice !== "" && isNaN(maxPrice)) {
+                alert("Max Price must be a number.");
+                return false;
+            }
+
+            // Additional validation can be added for other fields if needed
+
+            return true;
+        }
+    </script>
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <style>
     /* styling for the form */
