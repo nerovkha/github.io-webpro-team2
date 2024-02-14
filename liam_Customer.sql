@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 08, 2024 at 10:35 PM
--- Server version: 8.0.36-0ubuntu0.20.04.1
--- PHP Version: 8.0.30
+-- Host: db
+-- Generation Time: Feb 14, 2024 at 09:25 AM
+-- Server version: 8.0.34
+-- PHP Version: 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wp_zwe23000`
+-- Database: `aopp1`
 --
 
 -- --------------------------------------------------------
@@ -34,11 +34,6 @@ CREATE TABLE `customers` (
   `email` varchar(100) NOT NULL,
   `phone_nbr` varchar(50) NOT NULL,
   `address` varchar(200) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `state` varchar(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `postal_code` varchar(50) NOT NULL,
-  `registration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `purchase_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
