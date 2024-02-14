@@ -7,6 +7,12 @@
         echo "<br>Last modified: " . date("F d, Y H:i:s", $lastModifiedTime);
         ?>
         </div>
+        <?php
+    $filename = basename($_SERVER['PHP_SELF']);
+    if (file_exists($filename)) {
+        echo "<div>Last modified: " . date("F d, Y H:i:s", filemtime($filename)) . "</div>";
+    }
+    ?>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
