@@ -1,8 +1,8 @@
 <?php 
 include '../header.php';
-
+include 'db_conex.php';
 if(isset($_POST['submit'])) {
-    include 'db_conex.php';
+   
 
     $category = $_POST['category'];
     $min_price = $_POST['min_price'];
@@ -48,7 +48,7 @@ if(isset($_POST['submit'])) {
         }
         echo "</table>";
     } else {
-        echo "0 results";
+        echo "<h1>0 results</h1>";
     }
 
     $conn->close();
@@ -66,7 +66,9 @@ if(isset($_POST['submit'])) {
         width: 50%;
     }
 
-    
+    h1 {
+            text-align: center; /* Center align the <h1> element */
+        }
 </style>
 
 
@@ -100,7 +102,7 @@ if(isset($_POST['submit'])) {
     <br>
     <input type="submit" name="submit" value="Filter">
 </form>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <style>
     /* styling for the form */
     form {
@@ -147,3 +149,6 @@ if(isset($_POST['submit'])) {
 
 
 </style>
+
+
+<?php  include '../footer.php' ?>
