@@ -17,7 +17,7 @@ function calculateTotal($quantity, $price)
 }
 
 // Function to display product items
-function displayProduct($index, $product)
+function displayProduct($index, $product, $cartItem)
 {
     echo '
     <div class="row border-top border-bottom main align-items-center product-item">
@@ -78,7 +78,7 @@ if (isset($_POST['index'])) {
             <?php
             // Display each product in the cart
             foreach ($_SESSION['cart'] as $index => $cartItem) {
-                displayProduct($index, $products[$cartItem['product']]);
+                displayProduct($index, $products[$cartItem['product']], $cartItem);
             }
             ?>
 
