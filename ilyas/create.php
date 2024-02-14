@@ -11,12 +11,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $countryOfOrigin = $_POST["country_of_origin"];
     $Category = $_POST["category_name"];
     $brandId = $_POST["brand_Id"];
+    $Description= $_POST["description"];
+    $CategoryId= isset($_POST["category_id"]) ? $_POST["category_id"]:"0" ;
+    $created_at= date("Y-m-d H:i:s");
+    $barcode= isset($_POST["barcode"]) ? $_POST["barcode"]:"0";
 
 
     // Insert data into the database
-    $sql = "INSERT INTO ilyas_Product (brand_name, sale_price, country_of_origin,category_name,product_name,brand_Id) VALUES ('$brandName', '$salePrice', '$countryOfOrigin',' $Category',' $productName',$brandId)";
+    $sql = "INSERT INTO ilyas_Product (brand_name, sale_price, country_of_origin,category_name,product_name,brand_Id, description,category_id,created_at,barcode) VALUES ('$brandName', '$salePrice', '$countryOfOrigin',' $Category',' $productName','$brandId','$Description','$CategoryId','$created_at','$barcode')";
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo " <h1>New record created successfully</h1>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -33,7 +37,7 @@ $conn->close();
     <title>Insert Data</title>
 </head>
 <body>
-<form method="post" class="">
+<form method="post" name="admin_form" class="">
     <label>Category:</label>
     <select name="category_name">
         <option value="">All</option>
@@ -58,7 +62,16 @@ $conn->close();
     <label>Brand ID:</label>
     <input type="text" name="brand_Id">
     <br>
-    <input type="submit" value="Filter">
+    <label>Description:</label>
+    <input type="text" name="description">
+    <br>
+    <label>Category ID:</label>
+    <input type="text" name="category_id">
+    <br>
+    <label>Barcode:</label>
+    <input type="text" name="barcode">
+    <br>
+    <input type="submit" value="ADD">
 </form>
 </body>
 
