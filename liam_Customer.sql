@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 14, 2024 at 09:25 AM
+-- Generation Time: Feb 14, 2024 at 09:34 AM
 -- Server version: 8.0.34
 -- PHP Version: 8.2.8
 
@@ -34,7 +34,8 @@ CREATE TABLE `customers` (
   `email` varchar(100) NOT NULL,
   `phone_nbr` varchar(50) NOT NULL,
   `address` varchar(200) NOT NULL,
-  `purchase_date` date NOT NULL
+  `purchase_date` date NOT NULL,
+  `product_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -46,7 +47,7 @@ CREATE TABLE `customers` (
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -57,6 +58,16 @@ ALTER TABLE `customers`
 --
 ALTER TABLE `customers`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `customers`
+--
+ALTER TABLE `customers`
+  ADD CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `customers` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
