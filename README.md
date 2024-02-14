@@ -44,6 +44,7 @@ List the database tables that are part of your project.
 - Table 2 (Created By Zwe Lwin): Customer
 - Table 3 (Created By Augustine Nguyen Le Khang): Payments
 - Table 4 (Created By Nerov): Promotions
+- Table 5 (Created By Zwe Lwin): Orders
 
 > Include the ER Diagram of the database.
 
@@ -54,7 +55,7 @@ List the database tables that are part of your project.
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
 - Form 1 (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
-- Form 2: (Created By Liam): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 2: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | Link to the form (shell.hamk.fi). | Validations Applied
 - Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 
 ---
@@ -70,6 +71,8 @@ List any tables that you have created in the project work
 - Table 3 (Created By Augustine Nguyen Le Khang): payment | https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang_payment.sql | Link to the table (shell.hamk.fi). (http://shell.hamk.fi/pma/index.php?route=/table/structure&db=wp_bbcap23_2&table=AugustineNguyenLeKhang_payment).
 
 - Table 4 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | Link to the table (shell.hamk.fi).
+
+- Table 5 (Created By Liam): orders | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_orders.sql | Link to the table (shell.hamk.fi).
 
 - ER Diagram of our database : (https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=diagram.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1tA-idQyZ0-tMLxott2VKpGwWddtvUKoz%26export%3Ddownload)
 
