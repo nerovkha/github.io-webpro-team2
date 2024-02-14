@@ -71,7 +71,7 @@ List any tables that you have created in the project work
 
 - Table 4 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | Link to the table (shell.hamk.fi).
 
-- ER Diagram of our database : ![alt text](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=diagram.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1tA-idQyZ0-tMLxott2VKpGwWddtvUKoz%26export%3Ddownload)
+- ER Diagram of our database : (https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=diagram.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1tA-idQyZ0-tMLxott2VKpGwWddtvUKoz%26export%3Ddownload)
 
 ---
 
