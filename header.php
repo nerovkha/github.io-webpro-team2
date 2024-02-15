@@ -49,8 +49,8 @@
                                   Filter
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="ilyas/ilyas_filter.php">Filter Data</a></li>
-                                  <li><a class="dropdown-item" href="ilyas/create.php">Create & Delete Data</a></li>
+                                  <li><a class="dropdown-item" href="ilyas_filter.php">Filter Data</a></li>
+                                  <li><a class="dropdown-item" href="create.php">Create & Delete Data</a></li>
                              
                                 </ul>
                               </li>
