@@ -61,6 +61,7 @@ List and describe any forms that have been created as part of your project. Incl
 - Form 3 (Created By Ilyas): Form Name: Update_form https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas/create.php| http://shell.hamk.fi/~ilyas23000/projectWork/ilyas/create.php | Validations Applied
 
 - Form 4: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | Link to the form (shell.hamk.fi). | Validations Applied
+
 - Form 5: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 
 ---
@@ -69,9 +70,9 @@ List and describe any forms that have been created as part of your project. Incl
 
 List any tables that you have created in the project work
 
-- Table 1 (Created By ILYAS): ilyas_Product | https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas_Product.sql | Link to the table (shell.hamk.fi).
+- Table 1 (Created By ILYAS): ilyas_Product | https://github.com/nerovkha/github.io-webpro-team2/blob/main/ilyas_Product.sql | Link to the table (shell.hamk.fi) http://shell.hamk.fi/pma/index.php?route=/table/structure&db=wp_bbcap23_2&table=ilyas_Product.
 
-- Table 2 (Created By Liam): customer | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_Customer.sql |http://shell.hamk.fi/pma/index.php?route=/table/structure&db=wp_bbcap23_2&table=ilyas_Product.
+- Table 2 (Created By Liam): customer | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_Customer.sql | Link to the table (shell.hamk.fi).
 
 - Table 3 (Created By Augustine Nguyen Le Khang): payment | https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang_payment.sql | Link to the table (shell.hamk.fi). (http://shell.hamk.fi/pma/index.php?route=/table/structure&db=wp_bbcap23_2&table=AugustineNguyenLeKhang_payment).
 
