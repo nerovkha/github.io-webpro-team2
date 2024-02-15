@@ -2,13 +2,6 @@
 session_start();
 
 include("../header.php");
-include("db_connect.php");
-
-// Ensure that the cart is not empty
-if (empty($_SESSION['cart'])) {
-    header("Location: shopping_cart.php");
-    exit();
-}
 
 $products = [
     ['name' => 'Heirloom Tomato', 'price' => 4.00, 'image' => 'images/a.jpg'],
@@ -19,53 +12,70 @@ function calculateTotal($quantity, $price)
     return $quantity * $price;
 }
 
-// Process payment
-if (isset($_POST['confirm_payment'])) {
-    // Get user input
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    $payment_method = $_POST['payment_method'];
+$totalPrice = 0;
 
-    // Insert payment details into the database
-    $stmt = $conn->prepare("INSERT INTO payments (name, address, payment_method, total_price, date) VALUES (?, ?, ?, ?, NOW())");
-    $totalPrice = 0;
-    foreach ($_SESSION['cart'] as $index => $cartItem) {
-        $totalPrice += calculateTotal($cartItem['quantity'], $products[$cartItem['product']]['price']);
-    }
-    $stmt->bind_param("sssd", $name, $address, $payment_method, $totalPrice);
-    $stmt->execute();
-    $stmt->close();
-
-    // You can perform further validation and processing here
-
-    // For demonstration, let's just redirect to a success page
-    header("Location: payment_success.php");
-    exit();
-}
 ?>
 
-<div class="container mt-4">
-    <h4>Payment Details</h4>
-    <hr>
-    <form method="post" action="">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+<div class="card mt-4">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>Payment Summary</b></h4>
+                    </div>
+                </div>
+            </div>
+
+            <?php
+            if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $index => $cartItem) {
+                    $product = $products[$cartItem['product']];
+                    echo '
+                    <div class="row border-top border-bottom main align-items-center product-item">
+                        <div class="col-2">
+                            <img class="img-fluid" src="' . $product['image'] . '" alt="Product Image">
+                        </div>
+                        <div class="col">
+                            <div class="row text-muted">Vegetables</div>
+                            <div class="row">' . $product['name'] . '</div>
+                        </div>
+                        <div class="col">' . $cartItem['quantity'] . '</div>
+                        <div class="col">&euro; ' . number_format(calculateTotal($cartItem['quantity'], $product['price']), 2) . '</div>
+                    </div>';
+                    $totalPrice += calculateTotal($cartItem['quantity'], $product['price']);
+                }
+            } else {
+                echo '<div class="row"><div class="col">Your cart is empty</div></div>';
+            }
+            ?>
+
+            <div class="back-to-shop">
+                <a href="shopping_cart.php">&leftarrow;</a><span class="text-muted">Back to Cart</span>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+
+        <div class="col-md-4 summary">
+            <div>
+                <h5><b>Order Summary</b></h5>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">TOTAL ITEMS</div>
+                <div class="col text-right"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></div>
+            </div>
+            <div class="row">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&euro; <?php echo number_format($totalPrice, 2); ?></div>
+            </div>
+
+            <hr>
+            <form action="confirm_payment.php" method="post">
+                <button type="submit" class="btn btn-primary">Confirm Payment</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="payment_method">Payment Method:</label>
-            <select class="form-control" id="payment_method" name="payment_method" required>
-                <option value="Credit Card">Credit Card</option>
-                <option value="PayPal">PayPal</option>
-                <!-- Add more payment methods if needed -->
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary" name="confirm_payment">Confirm Payment</button>
-    </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </div>
 
-<?php include("../footer.php"); ?>
+<?php include('../footer.php'); ?>

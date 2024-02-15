@@ -42,14 +42,14 @@
                               </li>
                             <!-- Drop down bar for latter -->
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="liam.html">Shopping Cart</a>
+                                <a class="nav-link text-white" href="../liam/shopping_cart.php">Shopping Cart</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   Filter
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="ilyas_filter.php">Filter Data</a></li>
+                                  <li><a class="dropdown-item" href="../ilyas/ilyas_filter.php">Filter Data</a></li>
                                   <li><a class="dropdown-item" href="create.php">Create & Delete Data</a></li>
                              
                                 </ul>
