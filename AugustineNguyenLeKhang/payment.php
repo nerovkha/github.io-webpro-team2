@@ -14,7 +14,6 @@ $products = [
     ['name' => 'Heirloom Tomato', 'price' => 4.00, 'image' => 'images/a.jpg'],
 ];
 
-// Function to calculate the total price based on quantity
 function calculateTotal($quantity, $price)
 {
     return $quantity * $price;
