@@ -27,6 +27,16 @@ if (isset($_POST['confirm_payment'])) {
     $address = $_POST['address'];
     $payment_method = $_POST['payment_method'];
 
+    // Insert payment details into the database
+    $stmt = $conn->prepare("INSERT INTO payments (name, address, payment_method, total_price, date) VALUES (?, ?, ?, ?, NOW())");
+    $totalPrice = 0;
+    foreach ($_SESSION['cart'] as $index => $cartItem) {
+        $totalPrice += calculateTotal($cartItem['quantity'], $products[$cartItem['product']]['price']);
+    }
+    $stmt->bind_param("sssd", $name, $address, $payment_method, $totalPrice);
+    $stmt->execute();
+    $stmt->close();
+
     // You can perform further validation and processing here
 
     // For demonstration, let's just redirect to a success page
