@@ -34,7 +34,9 @@ https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/shopping_cart.
 
 Include more detailed information about Feature 3 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
----
+### feature 4
+
+Allow user to get promotion update via email.
 
 ## Database Tables
 
