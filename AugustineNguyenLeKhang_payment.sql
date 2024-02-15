@@ -33,7 +33,8 @@ CREATE TABLE `AugustineNguyenLeKhang_payment` (
   `OrderDate` date NOT NULL,
   `TotalAmount` decimal(10,0) NOT NULL,
   `BillingAddress` varchar(50) NOT NULL,
-  `ShippingAddress` varchar(50) NOT NULL
+  `ShippingAddress` varchar(50) NOT NULL,
+  `Quantity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --

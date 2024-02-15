@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 14, 2024 at 09:34 AM
+-- Generation Time: Feb 14, 2024 at 01:44 PM
 -- Server version: 8.0.34
 -- PHP Version: 8.2.8
 
@@ -24,50 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `customers` (
+CREATE TABLE `orders` (
   `id` int NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone_nbr` varchar(50) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `purchase_date` date NOT NULL,
-  `product_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `user_id` int DEFAULT NULL,
+  `total_price` decimal(10,2) DEFAULT NULL,
+  `date_placed` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `customers`
+-- Indexes for table `orders`
 --
-ALTER TABLE `customers`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`);
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `customers`
+ALTER TABLE `orders`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `customers`
---
-ALTER TABLE `customers`
-  ADD CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `customers` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
