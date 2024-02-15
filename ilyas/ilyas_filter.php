@@ -127,7 +127,7 @@ if(isset($_POST['submit'])) {
                 return false;
             }
 
-            // Additional validation can be added for other fields if needed
+           
 
             return true;
         }

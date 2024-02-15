@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$conn->close();
+
 ?>
 <div class="container">   
 <div class="form-container">   
@@ -67,11 +67,70 @@ $conn->close();
     <br>
     <input type="submit" value="ADD">
 </form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var addForm = document.forms["Add_form"];
+
+    addForm.addEventListener("submit", function(event) {
+        var category = addForm.elements["category_name"].value;
+        var price = addForm.elements["sale_price"].value;
+        var country = addForm.elements["country_of_origin"].value;
+        var productName = addForm.elements["product_name"].value;
+        var brandName = addForm.elements["brand_name"].value;
+        var brandId = addForm.elements["brand_Id"].value;
+        var description = addForm.elements["description"].value;
+
+        if (category === "") {
+            alert("Please select a category.");
+            event.preventDefault();
+            return;
+        }
+
+        if (price === "" || isNaN(price)) {
+            alert("Please enter a valid price.");
+            event.preventDefault();
+            return;
+        }
+
+        if (country === "") {
+            alert("Please enter the country of origin.");
+            event.preventDefault();
+            return;
+        }
+
+        if (productName === "") {
+            alert("Please enter the product name.");
+            event.preventDefault();
+            return;
+        }
+
+        if (brandName === "") {
+            alert("Please enter the brand name.");
+            event.preventDefault();
+            return;
+        }
+
+        if (brandId === "") {
+            alert("Please enter the brand ID.");
+            event.preventDefault();
+            return;
+        }
+
+        if (description === "") {
+            alert("Please enter a description.");
+            event.preventDefault();
+            return;
+        }
+    });
+});
+</script>
+
+
 </div>
 
 <div class="form-container">
 <form method="post" name="Delete_form" class="rectangle-form">
-    <h1>Update Data</h1>
+    <h1>Delete Data</h1>
         <label>Category:</label>
         <select name="category_name">
             <option value="">All</option>
@@ -108,6 +167,83 @@ $conn->close();
         <input type="submit" name="submit_delete" value="Delete">
     
 </form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var deleteForm = document.forms["Delete_form"];
+
+    deleteForm.addEventListener("submit", function(event) {
+        var category = deleteForm.elements["category_name"].value;
+        var price = deleteForm.elements["sale_price"].value;
+        var country = deleteForm.elements["country_of_origin"].value;
+        var productName = deleteForm.elements["product_name"].value;
+        var brandName = deleteForm.elements["brand_name"].value;
+        var brandId = deleteForm.elements["brand_Id"].value;
+        var description = deleteForm.elements["description"].value;
+        var categoryId = deleteForm.elements["category_id"].value;
+        var barcode = deleteForm.elements["barcode"].value;
+
+        if (category === "") {
+            alert("Please select a category.");
+            event.preventDefault();
+            return;
+        }
+
+        if (price === "") {
+            alert("Please enter a price.");
+            event.preventDefault();
+            return;
+        }
+
+        if (country === "") {
+            alert("Please enter the country of origin.");
+            event.preventDefault();
+            return;
+        }
+
+        if (productName === "") {
+            alert("Please enter the product name.");
+            event.preventDefault();
+            return;
+        }
+
+        if (brandName === "") {
+            alert("Please enter the brand name.");
+            event.preventDefault();
+            return;
+        }
+
+        if (brandId === "") {
+            alert("Please enter the brand ID.");
+            event.preventDefault();
+            return;
+        }
+
+        if (description === "") {
+            alert("Please enter a description.");
+            event.preventDefault();
+            return;
+        }
+
+        if (categoryId === "") {
+            alert("Please enter a category ID.");
+            event.preventDefault();
+            return;
+        }
+
+        if (barcode === "") {
+            alert("Please enter a barcode.");
+            event.preventDefault();
+            return;
+        }
+    });
+});
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </div>
 
@@ -181,9 +317,7 @@ if (isset($_POST['submit_delete'])) {
 
 ?>
 
-<script>
 
-</script>
 
 
 <style>

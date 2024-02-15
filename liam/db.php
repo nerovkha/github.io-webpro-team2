@@ -1,8 +1,8 @@
 <?php
-$servername = "php25-db-1";
-$username = "aopp1";
+$servername = "php24-db-1";
+$username = "root";
 $password = "password";
-$dbname = "aopp1";
+$dbname = "app1";
 
 //create database connection
 $conn = new mysqli($servername, $username, $password, $dbname);

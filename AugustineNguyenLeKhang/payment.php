@@ -28,21 +28,25 @@ $totalPrice = 0;
             </div>
 
             <?php
-            foreach ($_SESSION['cart'] as $index => $cartItem) {
-                $product = $products[$cartItem['product']];
-                echo '
-                <div class="row border-top border-bottom main align-items-center product-item">
-                    <div class="col-2">
-                        <img class="img-fluid" src="' . $product['image'] . '" alt="Product Image">
-                    </div>
-                    <div class="col">
-                        <div class="row text-muted">Vegetables</div>
-                        <div class="row">' . $product['name'] . '</div>
-                    </div>
-                    <div class="col">' . $cartItem['quantity'] . '</div>
-                    <div class="col">&euro; ' . number_format(calculateTotal($cartItem['quantity'], $product['price']), 2) . '</div>
-                </div>';
-                $totalPrice += calculateTotal($cartItem['quantity'], $product['price']);
+            if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $index => $cartItem) {
+                    $product = $products[$cartItem['product']];
+                    echo '
+                    <div class="row border-top border-bottom main align-items-center product-item">
+                        <div class="col-2">
+                            <img class="img-fluid" src="' . $product['image'] . '" alt="Product Image">
+                        </div>
+                        <div class="col">
+                            <div class="row text-muted">Vegetables</div>
+                            <div class="row">' . $product['name'] . '</div>
+                        </div>
+                        <div class="col">' . $cartItem['quantity'] . '</div>
+                        <div class="col">&euro; ' . number_format(calculateTotal($cartItem['quantity'], $product['price']), 2) . '</div>
+                    </div>';
+                    $totalPrice += calculateTotal($cartItem['quantity'], $product['price']);
+                }
+            } else {
+                echo '<div class="row"><div class="col">Your cart is empty</div></div>';
             }
             ?>
 
@@ -58,7 +62,7 @@ $totalPrice = 0;
             <hr>
             <div class="row">
                 <div class="col">TOTAL ITEMS</div>
-                <div class="col text-right"><?php echo count($_SESSION['cart']); ?></div>
+                <div class="col text-right"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></div>
             </div>
             <div class="row">
                 <div class="col">TOTAL PRICE</div>
@@ -70,6 +74,7 @@ $totalPrice = 0;
                 <button type="submit" class="btn btn-primary">Confirm Payment</button>
             </form>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
 </div>
 

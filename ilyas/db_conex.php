@@ -1,7 +1,7 @@
 <?php
 
 $servername = "php24-db-1";
-$username = "app1";
+$username = "root";
 $password = "password";
 $dbname = "app1";
 
