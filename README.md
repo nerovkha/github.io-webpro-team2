@@ -62,7 +62,7 @@ List and describe any forms that have been created as part of your project. Incl
 
 - Form 4: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | (http://shell.hamk.fi/~zwe23000/project/liam/process.php) (shell.hamk.fi). | Validations Applied
 
-- Form 5: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 5: (Created By Nerov): Form Name:https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov/contact_us.php | http://shell.hamk.fi/~nerov23000/ProjectWork/nerov/contact_us.php. | Validations Applied
 
 ---
 
@@ -76,7 +76,7 @@ List any tables that you have created in the project work
 
 - Table 3 (Created By Augustine Nguyen Le Khang): payment | https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang_payment.sql | Link to the table (shell.hamk.fi). (http://shell.hamk.fi/pma/index.php?route=/table/structure&db=wp_bbcap23_2&table=AugustineNguyenLeKhang_payment).
 
-- Table 4 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | Link to the table (shell.hamk.fi).
+- Table 4 (Created By Nerov): Promotions | https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov_Promotions.sql | http://shell.hamk.fi/pma/index.php?route=/sql&pos=0&db=wp_bbcap23_2&table=Nerov_Promotions
 
 - Table 5 (Created By Liam): orders | https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam_orders.sql | (http://shell.hamk.fi/pma/index.php?route=/sql&pos=0&db=wp_bbcap23_2&table=orders) (shell.hamk.fi).
 
