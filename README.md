@@ -37,6 +37,8 @@ Include more detailed information about Feature 3 here. Provide links to related
 ### feature 4
 
 Allow user to get promotion update via email.
+https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov/contact_us.php & http://shell.hamk.fi/~nerov23000/ProjectWork/nerov/contact_us.php  
+
 
 ## Database Tables
 

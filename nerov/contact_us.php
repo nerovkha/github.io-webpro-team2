@@ -52,7 +52,12 @@ include '../header.php';
 
 </form>
    
+<?php 
 
+include '../footer.php'; 
+
+
+?> 
 
 
 <script>
@@ -106,4 +111,4 @@ include '../header.php';
     emailInput.addEventListener("input", checkEmail);
     textInput.addEventListener("input", checkText);
 </script>
-<?php '../footer.php'; ?> 
+
