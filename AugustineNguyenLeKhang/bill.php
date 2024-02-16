@@ -27,6 +27,9 @@ $totalPrice = isset($_SESSION["totalPrice"]) ? $_SESSION["totalPrice"] : 0;
         <p><strong>Payment Method:</strong> <?php echo $payment_method; ?></p>
         <p><strong>Total Price:</strong> &euro; <?php echo number_format($totalPrice, 2); ?></p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </div>
+
 
 <?php include('../footer.php'); ?>
