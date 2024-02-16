@@ -67,7 +67,7 @@ List and describe any forms that have been created as part of your project. Incl
 
 - Form 4: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | (http://shell.hamk.fi/~zwe23000/project/liam/process.php) (shell.hamk.fi). | Validations Applied
 
-- Form 5: (Created By Augustine): payment: https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang/payment.php | | Validations Applied
+- Form 5: (Created By Augustine): payment: https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang/payment.php | (http://shell.hamk.fi/~lekhang23000/projectwork/AugustineNguyenLeKhang/payment.php) | Validations Applied
 
 - Form 6: (Created By Nerov): Form Name:https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov/contact_us.php | http://shell.hamk.fi/~nerov23000/ProjectWork/nerov/contact_us.php. | Validations Applied
 
