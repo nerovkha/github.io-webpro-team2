@@ -44,6 +44,9 @@ if (isset($_POST['checkout'])) {
     // Add shipping cost
     $totalPrice += 5.00;
 
+    // Store the total price in the session
+    $_SESSION["totalPrice"] = $totalPrice;
+
     // Insert the order into the database
     $userId = 1;
 
@@ -72,11 +75,7 @@ if (isset($_POST['checkout'])) {
     // Display the success message with Bootstrap alert centered
     echo '<div class="container d-flex justify-content-center align-items-center vh-100">';
     echo '<div class="alert alert-success text-center" role="alert">';
-    echo "Your order has been placed successfully. <br> Order ID: $orderId <br> <a href='payment.php' class='alert-link'>Go to payment</a>";
+    echo "Your order has been placed successfully. <br> Order ID: $orderId <br> <a href='../AugustineNguyenLeKhang/payment.php' class='alert-link'>Go to payment</a>";
     echo '</div>';
     echo '</div>';
 }
-
-// footer
-include('../footer.php');
-?>
