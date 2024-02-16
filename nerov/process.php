@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     include 'db.php';
 
     // Define an SQL query to insert data into the 'studentsinfo' table
-    $sql = "insert into Promotions(promotion_id)
+    $sql = "insert into Nerov_Promotions(promotion_id)
             values('$promotionID')";
   
     // Execute the SQL query using the database connection
