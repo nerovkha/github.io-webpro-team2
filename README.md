@@ -32,7 +32,8 @@ https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/shopping_cart.
 
 ### Feature 3
 
-Include more detailed information about Feature 3 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+Ask for customer infomation such as: phone, name, email, address, payment method. After that, move to the summary page that takes all information from shopping_cart, process, and payment then display them.
+
 
 ### feature 4
 
@@ -64,7 +65,10 @@ List and describe any forms that have been created as part of your project. Incl
 
 - Form 4: (Created By Liam): Order Comfirmation: (https://github.com/nerovkha/github.io-webpro-team2/blob/main/liam/process.php) | (http://shell.hamk.fi/~zwe23000/project/liam/process.php) (shell.hamk.fi). | Validations Applied
 
-- Form 5: (Created By Nerov): Form Name:https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov/contact_us.php | http://shell.hamk.fi/~nerov23000/ProjectWork/nerov/contact_us.php. | Validations Applied
+- Form 5: (Created By Augustine): payment: https://github.com/nerovkha/github.io-webpro-team2/blob/main/AugustineNguyenLeKhang/payment.php | | Validations Applied
+
+- Form 6: (Created By Nerov): Form Name:https://github.com/nerovkha/github.io-webpro-team2/blob/main/nerov/contact_us.php | http://shell.hamk.fi/~nerov23000/ProjectWork/nerov/contact_us.php. | Validations Applied
+
 
 ---
 
