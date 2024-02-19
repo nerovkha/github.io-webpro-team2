@@ -50,7 +50,8 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                   <li><a class="dropdown-item" href="ilyas_filter.php">Filter Data</a></li>
-                                  <li><a class="dropdown-item" href="create.php">Create & Delete Data</a></li>
+                                  <li><a class="dropdown-item" href="create.php">Create Data</a></li>
+                                  <li><a class="dropdown-item" href="delete.php">Delete Data</a></li>
                              
                                 </ul>
                               </li>
